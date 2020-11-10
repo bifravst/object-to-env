@@ -1,0 +1,92 @@
+{
+  "name": "@bifravst/object-to-env",
+  "version": "0.0.0-development",
+  "description": "Helper functions which converts an object to environment variable definitions",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bifravst/object-to-env.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bifravst/object-to-env/issues"
+  },
+  "homepage": "https://github.com/bifravst/object-to-env",
+  "keywords": [
+    "Cloud",
+    "IoT",
+    "Bifravst",
+    "Asset Tracker",
+    "NordicSemiconductor"
+  ],
+  "author": "Nordic Semiconductor ASA | nordicsemi.no",
+  "license": "BSD-3-Clause",
+  "dependencies": {
+    "change-case": "^4.1.1"
+  },
+  "devDependencies": {
+    "@bifravst/code-style": "8.0.134",
+    "@commitlint/cli": "11.0.0",
+    "@commitlint/config-angular": "11.0.0",
+    "@types/jest": "26.0.15",
+    "husky": "4.3.0",
+    "jest": "26.6.3",
+    "ts-jest": "26.4.4",
+    "typescript": "4.0.5"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged && npx jest --onlyChanged"
+    }
+  },
+  "lint-staged": {
+    "*.ts": [
+      "prettier --write",
+      "eslint --ext .js,.ts"
+    ],
+    "*.{md,json,yaml,yml}": [
+      "prettier --write"
+    ]
+  },
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  },
+  "release": {
+    "branches": [
+      "saga"
+    ],
+    "remoteTags": true
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "package-lock.json",
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "jest": {
+    "testURL": "http://localhost",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "json"
+    ],
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": ".+\\.spec\\.ts$",
+    "globals": {
+      "ts-jest": {
+        "diagnostics": true
+      }
+    }
+  }
+}
