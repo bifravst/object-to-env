@@ -31,7 +31,7 @@
     "@bifravst/code-style": "8.0.134",
     "@commitlint/cli": "11.0.0",
     "@commitlint/config-angular": "11.0.0",
-    "@types/jest": "26.0.16",
+    "@types/jest": "26.0.17",
     "husky": "4.3.5",
     "jest": "26.6.3",
     "ts-jest": "26.4.4",
