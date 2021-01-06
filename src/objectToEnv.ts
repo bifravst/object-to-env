@@ -5,7 +5,7 @@ const toEnvKey = (key: string, prefix?: string) =>
 	`${prefix ?? ''}${changeCase.constantCase(key)}`
 
 /**
- * Returns the stack outputs as create-react-app environment variables
+ * Convert an object to environment variable definitions
  */
 export const objectToEnv = (obj: object, prefix?: string) =>
 	Object.entries(obj).reduce(
