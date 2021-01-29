@@ -7,7 +7,10 @@ const toEnvKey = (key: string, prefix?: string) =>
 /**
  * Convert an object to environment variable definitions
  */
-export const objectToEnv = (obj: object, prefix?: string) =>
+export const objectToEnv = (
+	obj: Record<string, any>,
+	prefix?: string,
+): string =>
 	Object.entries(obj).reduce(
 		(env, [OutputKey, OutputValue]) =>
 			`${env}${toEnvKey(OutputKey || '', prefix)}=${OutputValue}${os.EOL}`,
