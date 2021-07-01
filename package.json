@@ -36,7 +36,7 @@
     "@nordicsemiconductor/eslint-config-asset-tracker-cloud-typescript": "7.0.27",
     "@types/jest": "26.0.23",
     "eslint": "7.29.0",
-    "husky": "6.0.0",
+    "husky": "7.0.0",
     "jest": "27.0.6",
     "lint-staged": "11.0.0",
     "pinst": "2.1.6",
