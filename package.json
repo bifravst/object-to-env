@@ -30,7 +30,7 @@
     "change-case": "4.1.2"
   },
   "devDependencies": {
-    "@nordicsemiconductor/asset-tracker-cloud-code-style": "9.2.1",
+    "@nordicsemiconductor/asset-tracker-cloud-code-style": "9.2.3",
     "@types/jest": "27.0.2",
     "jest": "27.3.1",
     "ts-jest": "27.0.7"
