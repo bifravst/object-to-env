@@ -33,7 +33,7 @@
     "@nordicsemiconductor/asset-tracker-cloud-code-style": "9.2.33",
     "@types/jest": "27.0.3",
     "jest": "27.4.5",
-    "ts-jest": "27.1.1"
+    "ts-jest": "27.1.2"
   },
   "lint-staged": {
     "*.ts": [
