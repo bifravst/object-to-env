@@ -12,7 +12,7 @@ Convert an object to environment variable definitions
 
 ## Installation
 
-    npm i --save-dev @nordicsemiconductor/object-to-env
+    npm i --save-dev --save-exact @nordicsemiconductor/object-to-env
 
 ## Usage
 
