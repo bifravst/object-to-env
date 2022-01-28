@@ -37,7 +37,7 @@ describe('objectToEnv()', () => {
 					websiteDomainName:
 						'asset-tracker-websitbucketc74c6fbf-e126q3sws4eq.s3.eu-central-1.amazonaws.com',
 				},
-				'REACT_APP_',
+				{ prefix: 'REACT_APP_' },
 			),
 		).toEqual(
 			[
@@ -51,11 +51,19 @@ describe('objectToEnv()', () => {
 			].join(os.EOL),
 		)
 	})
-	it('should escape the quote in values', () => {
+	it('should escape the quote in values', () =>
 		expect(
 			objectToEnv({
 				quotedValue: 'some value with " in it',
 			}),
-		).toEqual(['QUOTED_VALUE="some value with \\" in it"', ''].join(os.EOL))
-	})
+		).toEqual(['QUOTED_VALUE="some value with \\" in it"', ''].join(os.EOL)))
+	it('should allow to turn off quoting', () =>
+		expect(
+			objectToEnv(
+				{
+					quotedValue: 'some value with " in it',
+				},
+				{ quote: '' },
+			),
+		).toEqual(['QUOTED_VALUE=some value with " in it', ''].join(os.EOL)))
 })
