@@ -30,7 +30,7 @@
   "devDependencies": {
     "@nordicsemiconductor/asset-tracker-cloud-code-style": "11.0.79",
     "@swc/jest": "0.2.21",
-    "@types/jest": "27.5.1",
+    "@types/jest": "27.5.2",
     "jest": "28.1.0"
   },
   "lint-staged": {
