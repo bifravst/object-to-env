@@ -28,7 +28,7 @@
     "change-case": "4.1.2"
   },
   "devDependencies": {
-    "@nordicsemiconductor/asset-tracker-cloud-code-style": "11.0.100",
+    "@nordicsemiconductor/asset-tracker-cloud-code-style": "11.0.101",
     "@swc/jest": "0.2.22",
     "@types/jest": "28.1.6",
     "jest": "28.1.3"
