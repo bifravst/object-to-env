@@ -1,9 +1,11 @@
+import assert from 'node:assert/strict'
+import { describe, it } from 'node:test'
 import * as os from 'os'
 import { objectToEnv } from './objectToEnv'
 
-describe('objectToEnv()', () => {
-	it('should convert an object to environment variable definitions', () => {
-		expect(
+void describe('objectToEnv()', () => {
+	void it('should convert an object to environment variable definitions', () => {
+		assert.equal(
 			objectToEnv({
 				websiteBucketName: 'asset-tracker-websitbucketc74c6fbf-e126q3sws4eq',
 				userPoolClientId: '7mfbudbt5eq56kgo2244sa9kc8',
@@ -13,7 +15,7 @@ describe('objectToEnv()', () => {
 				websiteDomainName:
 					'asset-tracker-websitbucketc74c6fbf-e126q3sws4eq.s3.eu-central-1.amazonaws.com',
 			}),
-		).toEqual(
+
 			[
 				'WEBSITE_BUCKET_NAME="asset-tracker-websitbucketc74c6fbf-e126q3sws4eq"',
 				'USER_POOL_CLIENT_ID="7mfbudbt5eq56kgo2244sa9kc8"',
@@ -25,8 +27,8 @@ describe('objectToEnv()', () => {
 			].join(os.EOL),
 		)
 	})
-	it('should convert an object to a React App environment', () => {
-		expect(
+	void it('should convert an object to a React App environment', () => {
+		assert.equal(
 			objectToEnv(
 				{
 					websiteBucketName: 'asset-tracker-websitbucketc74c6fbf-e126q3sws4eq',
@@ -39,7 +41,7 @@ describe('objectToEnv()', () => {
 				},
 				{ prefix: 'REACT_APP_' },
 			),
-		).toEqual(
+
 			[
 				'REACT_APP_WEBSITE_BUCKET_NAME="asset-tracker-websitbucketc74c6fbf-e126q3sws4eq"',
 				'REACT_APP_USER_POOL_CLIENT_ID="7mfbudbt5eq56kgo2244sa9kc8"',
@@ -51,19 +53,21 @@ describe('objectToEnv()', () => {
 			].join(os.EOL),
 		)
 	})
-	it('should escape the quote in values', () =>
-		expect(
+	void it('should escape the quote in values', () =>
+		assert.equal(
 			objectToEnv({
 				quotedValue: 'some value with " in it',
 			}),
-		).toEqual(['QUOTED_VALUE="some value with \\" in it"', ''].join(os.EOL)))
-	it('should allow to turn off quoting', () =>
-		expect(
+			['QUOTED_VALUE="some value with \\" in it"', ''].join(os.EOL),
+		))
+	void it('should allow to turn off quoting', () =>
+		assert.equal(
 			objectToEnv(
 				{
 					quotedValue: 'some value with " in it',
 				},
 				{ quote: '' },
 			),
-		).toEqual(['QUOTED_VALUE=some value with " in it', ''].join(os.EOL)))
+			['QUOTED_VALUE=some value with " in it', ''].join(os.EOL),
+		))
 })
