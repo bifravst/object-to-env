@@ -1,1 +1,1 @@
-export * from './objectToEnv'
+export * from './objectToEnv.js'
