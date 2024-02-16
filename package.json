@@ -82,5 +82,5 @@
     "LICENSE",
     "README.md"
   ],
-  "prettier": "@nordicsemiconductor/asset-tracker-cloud-code-style/.prettierrc"
+  "prettier": "@bifravst/prettier-config"
 }
