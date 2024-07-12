@@ -1,4 +1,4 @@
-# objectToEnv [![npm version](https://img.shields.io/npm/v/rsrp-bar/object-to-env.svg)](https://www.npmjs.com/package/rsrp-bar/object-to-env)
+# objectToEnv [![npm version](https://img.shields.io/npm/v/@bifravst/object-to-env.svg)](https://www.npmjs.com/package/@bifravst/object-to-env)
 
 [![GitHub Actions](https://github.com/bifravst/object-to-env/workflows/Test%20and%20Release/badge.svg)](https://github.com/bifravst/object-to-env/actions)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
@@ -11,7 +11,7 @@ Convert an object to environment variable definitions.
 
 ## Installation
 
-    npm i --save-dev --save-exact rsrp-bar/object-to-env
+    npm i --save-dev --save-exact @bifravst/object-to-env
 
 ## Usage
 
