@@ -1,5 +1,5 @@
 {
-  "name": "@nordicsemiconductor/object-to-env",
+  "name": "@bifravst/object-to-env",
   "version": "0.0.0-development",
   "description": "Helper functions which converts an object to environment variable definitions",
   "type": "module",
@@ -16,12 +16,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/NordicSemiconductor/object-to-env-js.git"
+    "url": "git+https://github.com/bifravst/object-to-env.git"
   },
   "bugs": {
-    "url": "https://github.com/NordicSemiconductor/object-to-env-js/issues"
+    "url": "https://github.com/bifravst/object-to-env/issues"
   },
-  "homepage": "https://github.com/NordicSemiconductor/object-to-env-js#readme",
+  "homepage": "https://github.com/bifravst/object-to-env#readme",
   "keywords": [
     "nrf-asset-tracker",
     "iot"
