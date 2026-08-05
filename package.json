@@ -36,7 +36,7 @@
     "@bifravst/eslint-config-typescript": "6.4.4",
     "@bifravst/prettier-config": "1.1.17",
     "@commitlint/config-conventional": "19.8.1",
-    "@types/node": "22.20.1",
+    "@types/node": "24.13.3",
     "check-node-version": "4.2.1",
     "husky": "9.1.7"
   },
