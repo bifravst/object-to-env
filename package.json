@@ -12,7 +12,8 @@
     "test": "npx tsx --test src/*.spec.ts",
     "postinstall": "husky",
     "prepublishOnly": "pinst --disable",
-    "postpublish": "pinst --enable"
+    "postpublish": "pinst --enable",
+    "prepare": "case \"$npm_command\" in install|ci) check-node-version --package ;; esac"
   },
   "repository": {
     "type": "git",
@@ -36,6 +37,7 @@
     "@bifravst/prettier-config": "1.1.17",
     "@commitlint/config-conventional": "19.8.1",
     "@types/node": "22.20.1",
+    "check-node-version": "4.2.1",
     "husky": "9.1.7"
   },
   "lint-staged": {
@@ -49,7 +51,7 @@
   },
   "engines": {
     "node": ">=22",
-    "npm": ">=10"
+    "npm": ">=12.0.2 <13"
   },
   "release": {
     "branches": [
