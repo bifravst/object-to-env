@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict'
 import { describe, it } from 'node:test'
 import * as os from 'os'
-import { objectToEnv } from './objectToEnv.js'
+import { objectToEnv } from './objectToEnv.ts'
 
 void describe('objectToEnv()', () => {
 	void it('should convert an object to environment variable definitions', () => {

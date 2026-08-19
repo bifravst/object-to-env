@@ -17,6 +17,11 @@
     "outDir": "dist/",
     "moduleResolution": "nodenext",
     "module": "nodenext",
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "rootDir": "./src",
+    "allowImportingTsExtensions": true,
+    "rewriteRelativeImportExtensions": true,
+    "noEmit": true,
+    "types": ["node"]
   }
 }
