@@ -5,6 +5,11 @@ on: push
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+permissions:
+  contents: write
+  issues: write
+  id-token: write
+
 jobs:
   tests:
     runs-on: ubuntu-24.04
